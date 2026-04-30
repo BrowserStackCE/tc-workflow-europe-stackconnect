@@ -1,0 +1,22 @@
+{
+  "name": "node-js-playwright-browserstack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sample-test": "npx browserstack-node-sdk playwright test --config=./playwright.config.js",
+    "app-test": "npx browserstack-node-sdk playwright test --config=./playwright.config.js --project='samsung' --project='google'",
+    "sample-local-test": "npx browserstack-node-sdk playwright test --config=./playwright.local.config.js",
+    "postinstall": "npm update browserstack-node-sdk",
+    "sample-legacy-test": "npx playwright test --config=./playwright.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@percy/playwright": "^1.1.0",
+    "@playwright/test": "^1.57.0",
+    "browserstack-node-sdk": "latest",
+    "webdriverio": "^9.27.0"
+  }
+}
