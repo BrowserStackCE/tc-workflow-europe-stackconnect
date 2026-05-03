@@ -15,8 +15,8 @@
   "license": "ISC",
   "devDependencies": {
     "@percy/playwright": "^1.1.0",
-    "@playwright/test": "^1.57.0",
-    "browserstack-node-sdk": "latest",
-    "webdriverio": "^9.27.0"
+    "@playwright/test": "1.57.0",
+    "browserstack-node-sdk": "^1.53.0",
+    "webdriverio": "9.27.0"
   }
 }
