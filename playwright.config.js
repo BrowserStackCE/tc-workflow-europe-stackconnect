@@ -1,9 +1,7 @@
 // This is a sample config for what users might be running locally
-const { devices } = require('./devices.json');
-
 const config = {
   testDir: './tests',
-  testMatch: '**/app_test_medi*.js',
+  testMatch: '**/bstack_test_demo*.js',
 
   /* Maximum time one test can run for. */
   timeout: 90 * 1000,
@@ -28,10 +26,10 @@ const config = {
   //     },
   //   },
   // ],
-  projects: devices.map(device => ({
-    name: device.deviceName,
-    use: { ...device }, // Pass device info into the worker "use" object
-  })),
+  // projects: devices.map(device => ({
+  //   name: device.deviceName,
+  //   use: { ...device }, // Pass device info into the worker "use" object
+  // })),
 };
 
 module.exports = config;

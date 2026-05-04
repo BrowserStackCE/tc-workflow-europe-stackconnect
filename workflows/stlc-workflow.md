@@ -20,11 +20,11 @@ For any selections give the user a UI to select from.
 * **Accessibility Check:** Verify if the provided URL is publicly accessible. If it is inaccessible or private, flag this to add **BrowserStack Local testing** during the SDK integration phase.
 
 ## Phase 3: Exploratory Testing
-* **Action:** Trigger the integrated Exploratory Testing tool for the provided URL. Generate 5 functinal Test cases for the provided url. atleast one test case should be for appointment confirmation workflow. Once the test cases are generated, add them to the Test Case repository. Use BrowserStack Test Management tool and ask for the project name to use. If no project name was obtaiend, create a new project in BrowserStack Test Management. 
+* **Action:** Trigger the integrated Exploratory Testing tool for the provided URL. Generate 5 functinal Test cases for the provided url. atleast one test case should be for checkout workflow. Once the test cases are generated, add them to the Test Case repository. Use BrowserStack Test Management tool and ask for the project name to use. If no project name was obtaiend, create a new project in BrowserStack Test Management. 
 * **Objective:** Generate Test cases and add them to the Test Management Reposistory. 
 
 ## Phase 4: Test Case Automation & Setup
-* **Instruction:** Based on the results of the exploratory testing and the target URL, **instruct the tool to automate exactly 1 test case which covers the appointment confirmation workflow.**
+* **Instruction:** Based on the results of the exploratory testing and the target URL, **instruct the tool to automate exactly 1 test case which covers the checkout workflow.**
 * **Framework Selection:** **Use Playwright as your test framework. 
 * **Language & Binding Selection:** Use Javascript as the programming language. 
 * **Workspace Creation:** Use the existing workspace/folder structured.
@@ -41,10 +41,10 @@ If some of the test fail in the initial run that is fine, only need one test to 
             osVersion: 11
             browserName: chrome
             browserVersion: 143.0
-          - browserName: safari
-            osVersion: Tahoe
-            browserVersion: 18.4
+          - browserName: Safari
             os: OS X
+            osVersion: Tahoe
+            browserVersion: 26.4
           - browserName: chrome
             osVersion: 12.0
             deviceName: Samsung Galaxy S22 Ultra        
