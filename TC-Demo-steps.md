@@ -21,7 +21,9 @@ Use test.automation@medistack.com and password as testingisfun99 for automating 
 
 ```
 
-* Step 4 - ```
+* Step 4 - Integrating with BrowserStack
+
+```
 
 Integrate with BrowserStack Automate. Generate or update the `browserstack.yml` file to optimize platform coverage. 
     
@@ -36,7 +38,10 @@ Integrate with BrowserStack Automate. Generate or update the `browserstack.yml` 
             os: OS X
           - browserName: chrome
             osVersion: 12.0
-            deviceName: Samsung Galaxy S22 Ultra        
+            deviceName: Samsung Galaxy S22 Ultra     
+
+    Use the projectName as `MediStack E2E Tests`
+    
     ``` 
 
 * Step 5 - Accessibility workflow
