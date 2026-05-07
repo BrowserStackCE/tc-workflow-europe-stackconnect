@@ -1,6 +1,11 @@
 # Test Companion Demo Workflow
 
-* Step 1 - Generate 5 functinal Test cases for the url https://medistack.vercel.app/. Atleast one test case should be for appointment confirmation workflow. Once the test cases are generated, add them to the Test Case repository. Use test.automation@medistack.com and password as testingisfun99 for exploring the application
+* Step 1 - Test Case Generation
+
+```
+Generate 5 functinal Test cases for the url https://medistack.vercel.app/. Atleast one test case should be for appointment confirmation workflow. Once the test cases are generated, add them to the Test Case repository. Use test.automation@medistack.com and password as testingisfun99 for exploring the application
+
+```
 
 * Step 2 - Create a new Project `MediStack E2E Tests` and add a folder inside the project in BrowserStack TM and add the test cases created.
 
@@ -38,11 +43,12 @@ Integrate with BrowserStack Automate. Generate or update the `browserstack.yml` 
 
 ```
 Include BrowserStack accessibility by using BrowserStack SDK tests while running the functional test.
+
 ```
 
 * Step 6 - Refactor the existing code
 
 ```
   Can you refactor the test case generated to follow the Page object model pattern.
-  
+
 ```  
