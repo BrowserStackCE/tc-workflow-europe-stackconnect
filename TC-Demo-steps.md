@@ -17,6 +17,8 @@ Generate 5 functinal Test cases for the url https://medistack.vercel.app/. Atlea
 Ask the agent to use the credentials at the end of the prompt
 
 ```
+
+The "Sign In" button, "Patient Details", "Dr. Sarah Johnson" text content could occur multiple times in a page. Try to use exact: true and always pick the first occurence of these fields.
 Use test.automation@medistack.com and password as testingisfun99 for automating the application
 
 ```
