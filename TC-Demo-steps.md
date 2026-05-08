@@ -43,6 +43,7 @@ Integrate with BrowserStack Automate. Generate or update the browserstack.yml fi
             deviceName: Samsung Galaxy S22 Ultra     
 
     Use the projectName as MediStack E2E Tests. Also include testObservability flag to true in SDK.
+    Include BrowserStack accessibility by using BrowserStack SDK tests while running the functional test.
 
 ``` 
 
