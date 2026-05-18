@@ -47,14 +47,7 @@ Integrate with BrowserStack Automate. Generate or update the browserstack.yml fi
 
 ``` 
 
-* Step 5 - Accessibility workflow
-
-```
-  Include BrowserStack accessibility by using BrowserStack SDK tests while running the functional test.
-
-```
-
-* Step 6 - Refactor the existing code
+* Step 5 - Refactor the existing code
 
 ```
   Can you refactor the test case generated to follow the Page object model pattern.
