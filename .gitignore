@@ -2,3 +2,6 @@ node_modules/
 logs/
 log/
 .DS_Store
+
+# Test Companion onboarding (local, per-machine)
+.test-companion/
