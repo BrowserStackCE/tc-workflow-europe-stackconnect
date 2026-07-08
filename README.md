@@ -5,23 +5,20 @@ This is a sample repo to get started with BrowserStack Test Companion
 
 ## Setup
 
-* Clone the repo `git clone https://github.com/BrowserStackCE/tc-workflow-europe-stackconnect.git` and run `cd tc-workflow-europe-stackconnect`.
+* Clone the repo's specific branch by running `git clone -b BStackbank https://github.com/BrowserStackCE/tc-workflow-europe-stackconnect.git` and then run `cd tc-workflow-europe-stackconnect`.
 * Ensure that the Test Companion agent is installed
 * Set `BROWSERSTACK_USERNAME` and `BROWSERSTACK_ACCESS_KEY` if not already configured in the Test Companion agent
-* Copy the contents of `workflows/simple-aut-agent.md`
-* Open Test Companion agent and select the `Manage Test Companion Rules & Agents` button
-* Navigate to the agents tab
-* Click on the `+` (plus) button next to the Workspace Agents
-* Provide a name to the agent simple-aut-agent.md and paste the contents copied from `workflows/simple-aut-agent.md`
-
-
+* Copy the contents of the `stlc-workflow.md` file. 
+* Click on the `+` (plus) button next to the Workspace Skills.
+* Open Test Companion agent and select `Rules & Skills`.
+* Navigate to the `Skills` tab.
+* Provide a name to the skill `explore-aut-agent` and paste the contents copied from `stlc-workflow.md`. 
 
 ## Running your tests
 
-- Click on the New Task (`+`) button of the Test Companion agent
-- In the prompt box type `/simple-aut-agent` and select the agent from the drop down.
-- Add a prompt next to the agent name `Test url - https://medistack.vercel.app/` and press enter
-
+* Click on the New Task (`+`) button of the Test Companion agent
+* In the prompt box type `/explore-aut-agent` and select the skill from the drop down.
+* Add a prompt next to the skill name `Test url - https://finstack-alpha.vercel.app/` and press enter.
 
 ## Notes
 * You can view your test results on the [BrowserStack Automate dashboard](https://www.browserstack.com/automate)
