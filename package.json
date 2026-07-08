@@ -8,8 +8,7 @@
     "app-test": "npx browserstack-node-sdk playwright test --config=./playwright.config.js --project='samsung' --project='google'",
     "sample-local-test": "npx browserstack-node-sdk playwright test --config=./playwright.local.config.js",
     "postinstall": "npm update browserstack-node-sdk",
-    "sample-legacy-test": "npx playwright test --config=./playwright.config.js",
-    "medistack-test": "npx browserstack-node-sdk playwright test --config=./playwright.medistack.config.js"
+    "sample-legacy-test": "npx playwright test --config=./playwright.config.js"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +16,7 @@
   "devDependencies": {
     "@axe-core/playwright": "^4.11.3",
     "@percy/playwright": "^1.1.0",
-    "@playwright/test": "1.57.0",
+    "@playwright/test": "^1.59.0",
     "browserstack-node-sdk": "^1.53.0"
   }
 }
