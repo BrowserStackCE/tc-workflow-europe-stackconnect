@@ -3,8 +3,16 @@ const config = {
   testDir: './tests',
   testMatch: '**/bstack_test_demo*.js',
 
-  /* Maximum time one test can run for. */
+  /* Maximum time one test can run for. Must stay >= 45s so BrowserStack Self Heal can trigger. */
   timeout: 90 * 1000,
+  use: {
+    /**
+     * Per-action timeout. Playwright's default is 0 (wait forever), which lets the
+     * socket go idle and tears the test down before Self Heal can trigger. A non-zero
+     * value gives Self Heal a window to heal a stale locator.
+     */
+    actionTimeout: 30 * 1000,
+  },
   expect: {
     /**
      * Maximum time expect() should wait for the condition to be met.
