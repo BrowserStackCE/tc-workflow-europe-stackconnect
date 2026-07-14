@@ -10,7 +10,7 @@ For any selections give the user a UI to select from.
 
 ## Phase 1: Environment & Pre-requisite Check
 * **Action:** Validate that **Node.js** and **Playwright** are installed.
-    * Always use Playwright 1.59
+    * Always use Playwright 1.59.1
 * **Logic:** * If present: Display "✅ [Language] is ready."
   * If missing: Provide installation commands and wait for user confirmation.
 
@@ -19,7 +19,7 @@ For any selections give the user a UI to select from.
 * **Validation:** Ensure the URL is valid (includes http/https) before proceeding.
 
 ## Phase 3: Exploratory Testing
-* **Action:** Trigger the integrated Exploratory Testing tool for the provided URL. Generate 5 functional Test cases for the provided url. At least one test case should be for the **e2e flow to get a quote for "Health Insurance"**. Use test.automation@medistack.com and password as testingisfun99 for exploring the application.
+* **Action:** Trigger the integrated Exploratory Testing tool for the provided URL. Generate 5 functional Test cases for the provided url. At least one test case should be for the **e2e flow to Add a Transaction**. Use test.automation@medistack.com and password as testingisfun99 for exploring the application.
 Once the test cases are generated, add them to the Test Case repository using BrowserStack Test Management.
 
 * **BEFORE querying Test Management, explicitly ask the user:** "What is the exact project name in BrowserStack Test Management where you'd like to save these test cases?"
@@ -28,29 +28,23 @@ Only after the user provides the name, query Test Management to verify it exists
 * **Objective:** Generate Test cases and add them to the Test Management Repository. 
 
 ## Phase 4: Test Case Automation
-* **Instruction:** Based on the results of the exploratory testing and the target URL, **automate exactly 1 test case which covers the e2e flow to get a quote for "Health Insurance".**
-* **Buffer:** Ensure the Playwright dependency is version 1.59 (explicitly upgrade it if an older version is present). If the test fails in the initial run that is fine, don't attempt to heal the script for locator issues; just fix any integration issues and move to the next phase.
+* **Instruction:** Based on the results of the exploratory testing and the target URL, **automate exactly 1 test case which covers the e2e flow to Add a Transaction.**
+* **Buffer:** Ensure the Playwright dependency is version 1.59.1 (explicitly upgrade it if an older version is present).
 * **Credentials:** Use test.automation@medistack.com and password as testingisfun99 for automating the application.
 
-## Phase 5: SDK Integration & Scaling Logic
+## Phase 5: SDK Integration & Scaling
 * **Action:** Take the 1 automated test case and integrate them with the **BrowserStack SDK**. Use the Playright integration doc for reference - https://www.browserstack.com/docs/automate/playwright/getting-started/nodejs/integrate-your-tests?fw-lang=nodejs. 
-* **YML Configuration:** Generate or update the `browserstack.yml` file to optimize platform coverage, use selfHeal: true capability. 
+* **YML Configuration:** Generate or update the `browserstack.yml` file to optimize platform coverage, use selfHeal: true, networkLogs: true, debug: true capability. 
     ```yaml
         platforms:
           - os: Windows
             osVersion: 11
-            browserName: chrome
+            browserName: edge
             browserVersion: 143.0
-          - browserName: playwright-webkit
-            osVersion: Tahoe
-            browserVersion: 26.4
-            os: OS X
           - browserName: chrome
-            osVersion: 12.0
-            deviceName: Samsung Galaxy S22 Ultra
-          - browserName: playwright-webkit
-            osVersion: 16
-            deviceName: iPhone 14
+            osVersion: Sequoia
+            browserVersion: 143.0
+            os: OS X
     ```    
     Use the projectName as Test Management’s project name referred/used by the user.
     
@@ -74,21 +68,3 @@ Only after the user provides the name, query Test Management to verify it exists
   until the TC ID is confirmed and the script title is updated.
 
 **Also after execution don't attempt to fix any test cases all they need to do is connect to BrowserStack Automate and start the session. Only work on fixing integration errors and not test selector errors**
-
-## Phase 6: Self-Healing Capability Demo
-* **Action:** Demonstrate BrowserStack's Self-Healing capability by deliberately testing against changed DOM elements.
-* **Script Modification:** Modify the automation script so that on the login page, it first clicks the **"Enable"** button next to the **'Self Heal / Percy Toggle Disabled'** label.
-* **Execution:** Once enabled, proceed to run the same e2e Health Insurance quote test flow. The enabled toggle will intentionally alter the application's UI elements/selectors, allowing BrowserStack's Self-Healing engine (configured via `selfHeal: true` in Phase 5) to automatically detect and fix the broken locators during the test run.
-* **Reference:** Use the Self-Healing integration doc for any specific setup queries - https://www.browserstack.com/docs/automate/playwright/self-healing?fw-lang=nodejs
-
-## ERROR HANDLING RULES
-
-| Situation                | Action                                              |
-| ------------------------ | --------------------------------------------------- |
-| Empty credentials        | Re-prompt once, then stop with link to profile page |
-| HTTP 401 from API        | Stop, show credential error, link to profile page   |
-| Tech stack not installed | Show install instructions, stop workflow            |
-| Git clone failure        | Retry once, then show error with repo URL           |
-| No tests passed          | Show log excerpt, link to automation dashboard      |
-| App upload failure       | Show API response, suggest re-uploading             |
-| Private URL detected     | Auto-enable BrowserStack Local, inform user         |
